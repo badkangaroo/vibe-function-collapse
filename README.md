@@ -1,5 +1,12 @@
 # WaveFunctionCollapse (Rust + JS/Wasm + Web App)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/badkangaroo/vibe-function-collapse.svg?style=social&label=Star)](https://github.com/badkangaroo/vibe-function-collapse)
+[![Rust](https://img.shields.io/badge/rust-v1.75+-orange.svg)](https://www.rust-lang.org/)
+[![Deploy Web App](https://github.com/badkangaroo/vibe-function-collapse/actions/workflows/deploy.yml/badge.svg)](https://github.com/badkangaroo/vibe-function-collapse/actions/workflows/deploy.yml)
+
+**[🚀 Live Demo](https://badkangaroo.github.io/vibe-function-collapse/)**
+
 A high-performance Rust implementation of the Wave Function Collapse (WFC) algorithm, designed for generating tile-based maps and textures. This project includes:
 
 - **Core Rust Library**: Fast and memory-efficient WFC implementation
@@ -138,11 +145,11 @@ async function generateMap() {
 
 ```
 wavefunctioncollapse/
-├── wfc_rust/          # Core Rust library
+├── core/              # Core Rust library
 │   ├── src/           # Rust source code
 │   └── Cargo.toml     # Rust dependencies
-├── pkg/               # Generated Wasm package (from wasm-pack)
-├── web-app/           # React frontend application
+├── core/pkg/          # Generated Wasm package (from wasm-pack)
+├── web/               # React frontend application
 │   ├── src/
 │   │   ├── components/  # React components (TileManager, RuleEditor, CanvasRenderer)
 │   │   ├── store/       # State management
@@ -155,13 +162,13 @@ wavefunctioncollapse/
 
 ### Rust Library
 ```bash
-cd wfc_rust
+cd core
 cargo build --release
 ```
 
 ### WebAssembly Package
 ```bash
-cd wfc_rust
+cd core
 wasm-pack build --target web
 ```
 
@@ -169,13 +176,13 @@ This generates the `pkg/` directory containing the Wasm module and JavaScript bi
 
 ### Web Application
 ```bash
-cd web-app
+cd web
 npm install
 npm run dev      # Development server
 npm run build    # Production build
 ```
 
-The web app expects the Wasm package to be available (either via npm link or copied to `node_modules/wfc_rust`).
+The web app expects the Wasm package to be available via a file link in `package.json` pointing to `core/pkg`.
 
 ## Web App Usage
 
