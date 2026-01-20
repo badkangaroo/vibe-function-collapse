@@ -19,16 +19,16 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Node
-node_modules/
-dist/
-build/
-coverage/
+**/node_modules/
+**/dist/
+**/build/
+**/coverage/
 .env
 .env.local
 .env.*.local
 
 # Rust
-target/
+**/target/
 **/*.rs.bk
 
 # Misc
