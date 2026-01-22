@@ -5,7 +5,7 @@
 [![Rust](https://img.shields.io/badge/rust-v1.75+-orange.svg)](https://www.rust-lang.org/)
 [![Deploy Web App](https://github.com/badkangaroo/vibe-function-collapse/actions/workflows/deploy.yml/badge.svg)](https://github.com/badkangaroo/vibe-function-collapse/actions/workflows/deploy.yml)
 
-**[🚀 Live Demo](https://badkangaroo.github.io/vibe-function-collapse/)**
+**[🚀 Live Demo](https://badkangaroo.github.io/vibe-function-collapse/index.html)**
 
 A high-performance Rust implementation of the Wave Function Collapse (WFC) algorithm, designed for generating tile-based maps and textures. This project includes:
 
